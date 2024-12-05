@@ -1,17 +1,15 @@
-import { login, register } from "./auth.js";
+document.querySelector(".create-task-btn").addEventListener("click", () => {
+  const taskName = prompt("Enter task name:");
+  const time = prompt("Enter task time (e.g., 10:00 - 11:00):");
 
-document.getElementById("login-form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const email = document.getElementById("login-email").value;
-  const password = document.getElementById("login-password").value;
-  await login(email, password);
+  if (taskName && time) {
+    const taskList = document.querySelector(".task-list");
+    const taskItem = document.createElement("li");
+    taskItem.className = "task-item";
+    taskItem.innerHTML = `
+      <span class="time">${time}</span>
+      <span class="task-name">${taskName}</span>
+    `;
+    taskList.appendChild(taskItem);
+  }
 });
-
-document
-  .getElementById("register-form")
-  .addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const email = document.getElementById("register-email").value;
-    const password = document.getElementById("register-password").value;
-    await register(email, password);
-  });
