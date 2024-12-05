@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
 const UserSchema = new mongoose.Schema({
-  email: { type: String, required: true, unique: true }, // Changed from username to email
+  email: { type: String, required: true, unique: true }, // Ensure email is unique
+  username: { type: String, required: true, unique: true }, // Username is required and unique
   password: { type: String, required: true },
 });
 
