@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #007bff, #0056b3);
+  background: linear-gradient(to bottom, #9ca4b4, #3d7a87);
   color: white;
   display: flex;
   align-items: center;
@@ -30,6 +30,11 @@ header p {
   margin-bottom: 20px;
 }
 
+header img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
 .options {
   display: flex;
   flex-direction: column;
@@ -47,19 +52,181 @@ header p {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #0056b3;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #779bbd;
 }
 
 .btn-secondary {
-  background-color: white;
-  color: #007bff;
+  background-color: #c1c7d6;
+  color: #000000;
 }
 
 .btn-secondary:hover {
-  background-color: #e0e0e0;
+  background-color: #779bbd;
+}
+
+//Register
+/* Additional Styles for Register Page */
+.register-box {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly lighter background for contrast */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.register-box header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333; /* Darker text for readability */
+}
+
+.register-box header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.register-box .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.register-box .form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.register-box .form-group input {
+  width: 80%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.register-box .form-group input:focus {
+  border-color: #0056b3;
+  background-color: #e7f1ff; /* Light blue background when focused */
+  outline: none;
+}
+
+.register-box .btn-primary {
+  background-color: #0056b3;
+  color: white;
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  width: 80%;
+  cursor: pointer;
+}
+
+.register-box .btn-primary:hover {
+  background-color: #004a99;
+}
+
+/* Footer Styling */
+.register-box footer {
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.register-box footer a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.register-box footer a:hover {
+  color: #003d73;
+}
+
+// Login
+/* Additional Styles for Login Page */
+.login-box {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly lighter background for contrast */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-box header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333; /* Darker text for readability */
+}
+
+.login-box .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-box .form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.login-box .form-group input {
+  width: 80%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.login-box .form-group input:focus {
+  border-color: #0056b3;
+  background-color: #e7f1ff; /* Light blue background when focused */
+  outline: none;
+}
+
+.login-box .btn-primary {
+  background-color: #0056b3;
+  color: white;
+  padding: 12px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  width: 80%;
+  cursor: pointer;
+}
+
+.login-box .btn-primary:hover {
+  background-color: #004a99;
+}
+
+/* Footer Styling */
+.login-box footer {
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.login-box footer a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.login-box footer a:hover {
+  color: #003d73;
 }

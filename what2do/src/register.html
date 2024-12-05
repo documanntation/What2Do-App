@@ -8,17 +8,41 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1>Create an Account</h1>
-      </header>
-      <main>
-        <form id="register-form">
-          <input type="text" placeholder="Enter your username" required />
-          <input type="email" placeholder="Enter your email" required />
-          <input type="password" placeholder="Enter your password" required />
-          <button type="submit" class="btn btn-primary">Register</button>
-        </form>
-      </main>
+      <div class="register-box">
+        <header>
+          <a href="/index.html">
+            <img src="../public/WHAT2DO-LOGO-removebg-preview.png" alt="Logo" />
+          </a>
+          <h1>Create an Account</h1>
+          <p>Get started with organizing your tasks efficiently!</p>
+        </header>
+        <main>
+          <form id="register-form">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+          <footer>
+            <p>Already have an account? <a href="./login.html">Log in</a></p>
+          </footer>
+        </main>
+      </div>
     </div>
   </body>
 </html>
