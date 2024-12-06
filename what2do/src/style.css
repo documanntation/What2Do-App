@@ -1,6 +1,9 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #9ca4b4, #3d7a87);
@@ -13,7 +16,7 @@ body {
 
 .container {
   text-align: center;
-  max-width: 500px;
+  max-width: 600px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -31,8 +34,8 @@ header p {
 }
 
 header img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 120px;
+  margin-bottom: 15px;
 }
 
 .options {
@@ -41,6 +44,7 @@ header img {
   gap: 15px;
 }
 
+/* Buttons */
 .btn {
   display: block;
   text-decoration: none;
@@ -49,15 +53,16 @@ header img {
   font-size: 1.2rem;
   text-align: center;
   transition: background 0.3s ease;
+  font-weight: 500;
 }
 
 .btn-primary {
-  background-color: #0056b3;
+  background-color: #437c84;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #779bbd;
+  background-color: #3d7a87;
 }
 
 .btn-secondary {
@@ -66,167 +71,177 @@ header img {
 }
 
 .btn-secondary:hover {
-  background-color: #779bbd;
+  background-color: #9ca4b4;
 }
 
-//Register
-/* Additional Styles for Register Page */
-.register-box {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Slightly lighter background for contrast */
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+/* Form Styles */
+#todo-form {
+  margin: 20px 0;
+  text-align: center;
 }
 
-.register-box header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #333; /* Darker text for readability */
-}
-
-.register-box header p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: #666;
-}
-
-.register-box .form-group {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.register-box .form-group label {
-  display: block;
+#input-box {
+  padding: 10px;
   font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #c1c7d6;
+  width: 75%;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.8);
   color: #333;
-  margin-bottom: 8px;
 }
 
-.register-box .form-group input {
-  width: 80%;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  background-color: #f7f7f7;
-  color: #333;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-.register-box .form-group input:focus {
-  border-color: #0056b3;
-  background-color: #e7f1ff; /* Light blue background when focused */
+#input-box:focus {
+  border-color: #437c84;
   outline: none;
 }
 
-.register-box .btn-primary {
-  background-color: #0056b3;
+#input-button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #437c84;
   color: white;
-  padding: 12px;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  width: 80%;
   cursor: pointer;
 }
 
-.register-box .btn-primary:hover {
-  background-color: #004a99;
+#input-button:hover {
+  background-color: #3d7a87;
 }
 
-/* Footer Styling */
-.register-box footer {
-  font-size: 0.9rem;
-  margin-top: 20px;
+/* Task List */
+.main-content {
+  display: flex;
+  gap: 20px;
 }
 
-.register-box footer a {
-  color: #0056b3;
-  text-decoration: none;
+#todo-app,
+#cafe-recommendations {
+  flex: 1;
+  border: 1px solid #c1c7d6;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-.register-box footer a:hover {
-  color: #003d73;
+#map {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
 }
 
-// Login
-/* Additional Styles for Login Page */
+#cafe-list {
+  list-style: none;
+  padding: 0;
+}
+
+#cafe-list li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #c1c7d6;
+  padding-bottom: 5px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.task-item {
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item .status {
+  font-weight: bold;
+  color: white;
+}
+
+.task-item button {
+  padding: 5px 10px;
+  background-color: #437c84;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-item button:hover {
+  background-color: #3d7a87;
+}
+
+/* Register and Login Styles */
+.register-box,
 .login-box {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Slightly lighter background for contrast */
+  background: rgba(255, 255, 255, 0.2);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.login-box header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #333; /* Darker text for readability */
-}
-
-.login-box .form-group {
-  margin-bottom: 20px;
   text-align: left;
 }
 
-.login-box .form-group label {
-  display: block;
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 8px;
+.register-box header,
+.login-box header {
+  text-align: center;
 }
 
+.register-box header h1,
+.login-box header h1 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.register-box header p,
+.login-box header p {
+  font-size: 1rem;
+  color: #d88265;
+}
+
+.register-box .form-group input,
 .login-box .form-group input {
-  width: 80%;
+  width: 100%;
   padding: 12px;
   font-size: 1rem;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  background-color: #f7f7f7;
+  border-radius: 5px;
+  border: 1px solid #c1c7d6;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #333;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+.register-box .form-group input:focus,
 .login-box .form-group input:focus {
-  border-color: #0056b3;
-  background-color: #e7f1ff; /* Light blue background when focused */
+  border-color: #437c84;
   outline: none;
 }
 
+.register-box .btn-primary,
 .login-box .btn-primary {
-  background-color: #0056b3;
+  background-color: #437c84;
   color: white;
-  padding: 12px;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 100%;
   cursor: pointer;
+  text-align: center;
+  font-weight: 500;
 }
 
+.register-box .btn-primary:hover,
 .login-box .btn-primary:hover {
-  background-color: #004a99;
+  background-color: #3d7a87;
 }
 
-/* Footer Styling */
-.login-box footer {
-  font-size: 0.9rem;
+/* Footer */
+footer {
   margin-top: 20px;
-}
-
-.login-box footer a {
-  color: #0056b3;
-  text-decoration: none;
-}
-
-.login-box footer a:hover {
-  color: #003d73;
+  font-size: 0.9rem;
+  color: #c1c7d6;
+  text-align: center;
 }

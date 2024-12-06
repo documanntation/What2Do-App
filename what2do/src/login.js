@@ -18,7 +18,7 @@ loginForm.addEventListener("submit", async (e) => {
   if (response.ok) {
     // Redirect to the profile or main page
     alert("Login successful!");
-    window.location.href = "/profile.html"; // Or wherever you want to redirect
+    window.location.href = "/src/dashboard.html"; // Or wherever you want to redirect
   } else {
     alert(`Error: ${data.message}`);
   }

@@ -1,55 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What2Do?</title>
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41XbdSLsLqx-K8cSBFHNXf_ukyVS4X3E&libraries=places"></script>
   </head>
   <body>
     <div class="container">
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <h2>Private</h2>
-        <ul class="sidebar-list">
-          <li>Home <span class="badge">8</span></li>
-          <li>Completed <span class="badge">16</span></li>
-          <li>Personal <span class="badge">4</span></li>
-          <li>Work <span class="badge">6</span></li>
-          <li class="create">+ Create new list</li>
-        </ul>
-        <h2>Group</h2>
-        <div class="group-list">
-          <div class="group-item">Future Project</div>
-          <div class="create">+ Create new group</div>
-        </div>
-      </aside>
-      <!-- Main Content -->
-      <main class="main-content">
-        <header>
-          <h1>Good Morning, Annisa! 👋</h1>
-          <p>Today, Wed 6 July 2025</p>
-          <button class="today-button">Today</button>
-        </header>
-        <section class="tasks">
-          <div class="task-header">
-            <h3>Tasks</h3>
-            <button class="create-task-btn">+ Create new task</button>
+      <header>
+        <h1>What2Do?</h1>
+        <p>Manage tasks and find nearby cafes for productivity</p>
+      </header>
+      <div class="main-content">
+        <div id="todo-app">
+          <div id="todo-form">
+            <input type="text" id="input-box" placeholder="Enter your task" />
+            <div class="container">
+              <button id="input-button" class="btn-primary">Add Task</button>
+            </div>
           </div>
-          <ul class="task-list">
-            <li class="task-item">
-              <span class="time">08:00 - 09:00</span>
-              <span class="task-name">Task 1</span>
-            </li>
-            <li class="task-item">
-              <span class="time">09:00 - 11:00</span>
-              <span class="task-name">Task 2</span>
-            </li>
-            <!-- Add more tasks here -->
-          </ul>
-        </section>
-      </main>
+          <h2>Your Tasks</h2>
+          <ul id="list-container" class="task-list"></ul>
+          <footer>
+            <div id="task-counters">
+              Completed: <span id="completed-counter">0</span> | Pending:
+              <span id="uncompleted-counter">0</span>
+            </div>
+          </footer>
+        </div>
+        <div id="cafe-recommendations">
+          <h2>Cafe Recommendations</h2>
+          <div id="map"></div>
+          <ul id="cafe-list"></ul>
+        </div>
+      </div>
     </div>
-    <script src="./profile.js"></script>
+    <script src="./dashboard.js"></script>
   </body>
 </html>
