@@ -136,10 +136,12 @@ function updateCounters() {
 
 document.getElementById("input-button").addEventListener("click", addTask);
 
-// Initial render
 renderTasks();
 
-// Initialize Google Maps and cafe recommendations
 window.onload = function () {
   initMap();
 };
+
+window.editTask = editTask;
+window.deleteTask = deleteTask;
+window.toggleTask = toggleTask;
